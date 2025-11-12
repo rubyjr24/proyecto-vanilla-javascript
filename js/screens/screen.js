@@ -3,8 +3,10 @@
 class Screen{
 
     #listeners = {};
+    html = new HtmlUtil();
     
 
+    // Este método devuelve el contenido de la screen
     paint(){
 
     }
@@ -14,14 +16,11 @@ class Screen{
 
         if (!Object.hasOwn(this.#listeners, element)){
             const data = {};
-            data[event] = callBack;
+            data[event] = [callBack];
             this.#listeners[element] = data; 
         
         }else{
-
-            const data = this.#listeners[element]
-            
-
+            this.#listeners[element].event.push(callBack);
         }
 
         

@@ -2,7 +2,7 @@
 
 class HtmlUtil{
 
-    static #checkContentListValidElements(content){
+    #checkContentListValidElements(content){
 
         if (!Assert.isList(content)){
             return false;
@@ -17,13 +17,13 @@ class HtmlUtil{
         return true;
     }
 
-    static #appendChilds(element, list){
+    #appendChilds(element, list){
         for (const child of list) {
             element.appendChild(child);
         }
     }
 
-    static #createHtmlElement(tag, content, classList, id){
+    #createHtmlElement(tag, content, classList, id){
         const element = document.createElement(tag);
 
         if (this.#checkContentListValidElements(content)) this.#appendChilds(element, content);
@@ -38,39 +38,39 @@ class HtmlUtil{
         return element;
     }
 
-    static div(content, classList, id){
+    div(content, classList, id){
         return this.#createHtmlElement('div', content, classList, id);
     }
 
-    static p(content, classList, id){
+    p(content, classList, id){
         return this.#createHtmlElement('p', content, classList, id);
     }
 
-    static span(content, classList, id){
+    span(content, classList, id){
         return this.#createHtmlElement('span', content, classList, id);
     }
 
-    static h1(content, classList, id){
+    h1(content, classList, id){
         return this.#createHtmlElement('h1', content, classList, id);
     }
 
-    static h2(content, classList, id){
+    h2(content, classList, id){
         return this.#createHtmlElement('h2', content, classList, id);
     }
 
-    static h3(content, classList, id){
+    h3(content, classList, id){
         return this.#createHtmlElement('h3', content, classList, id);
     }
 
-    static ol(content, classList, id){
+    ol(content, classList, id){
         return this.#createHtmlElement('ol', content, classList, id);
     }
 
-    static ul(content, classList, id){
+    ul(content, classList, id){
         return this.#createHtmlElement('ul', content, classList, id);
     }
 
-    static li(content, classList, id){
+    li(content, classList, id){
         return this.#createHtmlElement('li', content, classList, id);
     }
 
