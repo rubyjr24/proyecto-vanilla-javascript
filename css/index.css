@@ -21,3 +21,8 @@ html, body{
 #login{
     display: none;
 }
+
+#login-error{
+    visibility: hidden;
+    color: red;
+}

@@ -5,28 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/utils/assert.js"></script>
-    <script src="js/utils/html.js"></script>
 </head>
 <body>
+    <div id="main">
 
-    <div id="main"></div>
+        <div id="welcome">
+            <span>Bienvenido, pulsa Control + F11 o espera 5 segundos</span>
+        </div>
 
+        <form id="login">
+            <div class="inputs">
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="submit" value="Entrar" id="login-submit" disabled>
+            </div>
+            <span id="login-error">El email está mal formado</span>
+        </form>
 
-
-    <div id="welcome">
-        <span>Bienvenido, pulsa Control + F11 o espera 5 segundos</span>
     </div>
 
-    <form id="login">
-        <div class="inputs">
-            <input type="email" id="email" required>
-            <input type="submit" value="Entrar">
-        </div>
-        <span id="login-error"></span>
-    </form>
-
     <script src="js/index.js"></script>
-    
 </body>
 </html>
