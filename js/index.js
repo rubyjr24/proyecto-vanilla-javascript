@@ -49,7 +49,6 @@ const onBlurEmail = (e) => {
 }
 
 const onSubmitForm = (e) => {
-    e.preventDefault();
     const email = inputEmail.value;
 
     if (!validEmail(email)) return;
@@ -59,17 +58,10 @@ const onSubmitForm = (e) => {
 
     const userData = {};
 
-    if (email in data){
-        userData = data[email];
-    }
-
-    if (!("email" in data)){
-        userData.email = email;
-    }
+    userData.last_login = new Date();
 
     data[email] = userData;
-    
-    localStorage.setItem('user', JSON.stringify(data));
+    localStorage.setItem('users', JSON.stringify(data));
     
 }
 
