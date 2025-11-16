@@ -1,0 +1,30 @@
+
+
+#form-questions{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#question{
+    height: 10rem;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#table-questions{
+    display: none;
+}
+

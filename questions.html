@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/questions.css">
+</head>
+<body>
+    
+    <div id="main">
+
+        <div class="row">
+            <form id="form-questions">
+            
+                <div class="column">
+                    <label for="question">Pregunta:</label>
+                    <textarea type="text" id="question" required></textarea>
+                </div>
+                
+                <div>
+                    <label for="true">Verdadero</label>
+                    <input type="radio" name="result" id="true" required>
+                    <label for="false">Falso</label>
+                    <input type="radio" name="result" id="false" required>
+                </div>
+
+                <div class="column">
+                    <label for="points">Puntuación:</label>
+                    <input type="number" name="points" id="points" min="0" max="9" required>
+                </div>
+
+                <div>
+                    <button id="go-back-button">Atrás</button>
+                    <input type="submit" value="Guardar">
+                </div>
+
+            </form>
+
+            <span id="loading-question-message">Cargando preguntas...</span>
+            <table id="table-questions">
+                <tbody id="questions">
+                    <tr>
+                        <th>Pregunta</th>
+                        <th>Respuesta</th>
+                        <th>Puntuación</th>
+                        <th>Estado</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="js/questions.js"></script>
+</body>
+</html>

@@ -34,6 +34,7 @@ const welcomeTimeout = setTimeout(() => {
 
 window.addEventListener('keydown', onKeyDownWelcomeCallback);
 
+
 //Login
 
 const validEmail = (email) => emailRegex.test(email);
@@ -62,6 +63,8 @@ const onSubmitForm = (e) => {
 
     data[email] = userData;
     localStorage.setItem('users', JSON.stringify(data));
+
+    cookieStore.set('user', email);
     
 }
 
